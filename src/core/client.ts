@@ -1,9 +1,9 @@
 export default class Client {
-    #id: string
+    #id: string | undefined;
     #name:string
     #age: number
 
-    constructor(id: string, name: string, age: number) {
+    constructor(name: string, age: number, id?: string) {
         this.#id = id
         this.#name = name
         this.#age = age

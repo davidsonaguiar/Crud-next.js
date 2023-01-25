@@ -28,10 +28,11 @@ export default function Form(props: FormProps) {
 
         e.preventDefault()
 
+
         props.submitForm(new Client(
-            props.client? props.client.id: nanoid(5),
             inputs.name,
-            inputs.age
+            inputs.age,
+            props.client?.id
         ))
 
         props.cancelForm()
@@ -66,6 +67,8 @@ export default function Form(props: FormProps) {
                     name="age"
                     label="Age:"
                     type="number"
+                    min={14}
+                    max={130}
                     value={inputs.age}
                     handleValue={handleInput}/>
                     
@@ -75,7 +78,7 @@ export default function Form(props: FormProps) {
                     `}>
                     <Button color="blue">Salve</Button>
                     <Button 
-                        color="green"
+                        color="red"
                         handleClick={() => props.cancelForm()}>Cancel</Button>
                 </div>
             </form>

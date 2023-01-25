@@ -10,10 +10,10 @@ export default function Header() {
             py-3 px-4
             bg-slate-100 rounded shadow-md`}>
                 <ul className={`flex gap-6 justify-end`}>
-                    <li className="text-lg font-semibold hover:text-purple-600">Home</li>
-                    <li className="text-lg font-semibold hover:text-purple-600">About</li>
-                    <li className="text-lg font-semibold hover:text-purple-600">Clients</li>
-                    <li className="text-lg font-semibold hover:text-purple-600">Contact</li>
+                    <li className="text-lg font-semibold">Home</li>
+                    <li className="text-lg font-semibold">About</li>
+                    <li className="text-lg font-semibold text-purple-600">Clients</li>
+                    <li className="text-lg font-semibold">Contact</li>
                 </ul>
             </nav>
         </header>

@@ -3,6 +3,8 @@ interface InputProps {
     name: string,
     type: 'text' | 'number',
     value: string | number,
+    min?: number,
+    max?: number,
     handleValue: (value: string, name: string) => void
 }
 
@@ -23,10 +25,11 @@ export default function Input(props: InputProps) {
                 bg-purple-50 rounded-sm outline-none
                 text-gray-600 font-normal
                 autofill:bg-none`}
-
                 id={props.name}
                 type={props.type}
                 value={props.value}
+                min={props.min}
+                max={props.max}
                 onChange={(e) => props.handleValue(e.target.value, props.name)} 
                 required
                 autoComplete="off"/>
